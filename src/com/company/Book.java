@@ -3,11 +3,16 @@ package com.company;
 public class Book {
     private String ISBN;
     private String damages;
-    //Library person;
-    //Library list/collection;
+    private String bookTitle;
+    private String author;
+    LibraryUser person;
+    Library resources;
     public Book(String ISBN) {
         this.ISBN=ISBN;
         this.damages="";
+         this.bookTitle="";
+         this.author="";
+
     }
 
     public String getISBN() {
@@ -24,6 +29,18 @@ public class Book {
 
     public void setDamages(String damages) {
         this.damages = this.damages + ", " + damages;
+    }
+    public String getBookName(){
+        return this.bookTitle;
+    }
+    public void setBookName(String bbookTitle){
+        this.bookTitle=bookTitle;
+    }
+    public String getAuthor(){
+        return  this.author;
+    }
+    public void setAuthor(String author){
+        this.author=author;
     }
 //    public  boolean bookAvailabilityCheck(String bookName){
 //       if(Library collection){
