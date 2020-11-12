@@ -5,6 +5,9 @@ public class Book {
     private String damages;
     private String bookTitle;
     private String author;
+    private boolean borrowed;
+//    public int year;
+//    public String publisher;
     LibraryUser person;
     Library resources;
     public Book(String ISBN) {
@@ -12,6 +15,7 @@ public class Book {
         this.damages="";
          this.bookTitle="";
          this.author="";
+         this.borrowed=false;
 
     }
 
@@ -33,7 +37,7 @@ public class Book {
     public String getBookName(){
         return this.bookTitle;
     }
-    public void setBookName(String bbookTitle){
+    public void setBookName(String bookTitle){
         this.bookTitle=bookTitle;
     }
     public String getAuthor(){
@@ -42,15 +46,24 @@ public class Book {
     public void setAuthor(String author){
         this.author=author;
     }
-//    public  boolean bookAvailabilityCheck(String bookName){
-//       if(Library collection){
+    public boolean getBorrowed(){
+        return  this.borrowed;
+    }
+    public void  setBorrowed(boolean borrowed){
+        this.borrowed=borrowed;
+    }
+    //public boolean bookAvailabilityCheck(Book book){
+//        for(b:resources){
+//            System.out.println(b);
+//        }
+//       if(Library ){
 //           return true
 //        }
 //       return false
-//    }
+    //}
 //    public String bookDetails(String book){
-//        if(Library collection == null){
-//            System.out.println("it is not availbale");
+//        if(Library resources == null){
+//            System.out.println("it is not available");
 //        } else {
 //            System.out.println("book details");
 //        }
