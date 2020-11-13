@@ -3,10 +3,10 @@ package com.company;
 import java.util.ArrayList;
 
 public class Library {
-    ArrayList resources;
+    ArrayList<Book> resources;
 
     public Library(){
-        resources= new ArrayList();
+        resources= new ArrayList<Book>();
     }
 
 //    public void libraryDetails(){

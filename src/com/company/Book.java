@@ -1,29 +1,39 @@
 package com.company;
 
 public class Book {
-    private String ISBN;
+    private int ISBN;
     private String damages;
     private String bookTitle;
     private String author;
     private boolean borrowed;
-//    public int year;
-//    public String publisher;
+    private int year;
+    private String publisher;
     LibraryUser person;
     Library resources;
-    public Book(String ISBN) {
-        this.ISBN=ISBN;
+
+    public Book() {
+        this.ISBN=0;
         this.damages="";
          this.bookTitle="";
          this.author="";
          this.borrowed=false;
 
     }
+    public Book(int ISBN,String damages,String bookTitle,String author,boolean borrowed,int year,String publisher) {
+        this.ISBN=ISBN;
+        this.damages=damages;
+        this.bookTitle=bookTitle;
+        this.author=author;
+        this.borrowed=borrowed;
+        this.year=year;
+        this.publisher=publisher;
 
-    public String getISBN() {
+    }
+    public int getISBN() {
         return ISBN;
     }
 
-    public void setISBN(String ISBN) {
+    public void setISBN(int ISBN) {
         this.ISBN = ISBN;
     }
 
@@ -51,6 +61,21 @@ public class Book {
     }
     public void  setBorrowed(boolean borrowed){
         this.borrowed=borrowed;
+    }
+    public int getYear() {
+        return this.year;
+    }
+
+    public void setYear(int year) {
+        this.year = year;
+    }
+
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
     }
     //public boolean bookAvailabilityCheck(Book book){
 //        for(b:resources){
