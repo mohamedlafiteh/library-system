@@ -42,12 +42,12 @@ public class Book {
     }
 
     public void setDamages(String damages) {
-        this.damages = this.damages + ", " + damages;
+        this.damages = this.damages + ".\n " + damages;
     }
-    public String getBookName(){
+    public String getBookTitle(){
         return this.bookTitle;
     }
-    public void setBookName(String bookTitle){
+    public void setBookTitle(String bookTitle){
         this.bookTitle=bookTitle;
     }
     public String getAuthor(){
@@ -78,14 +78,16 @@ public class Book {
         this.publisher = publisher;
     }
     //public boolean bookAvailabilityCheck(Book book){
-//        for(b:resources){
-//            System.out.println(b);
-//        }
-//       if(Library ){
-//           return true
-//        }
-//       return false
-    //}
+//        for(int i = 0; i < resources.size();i++){
+/*          Book bookCheck = resources.get(book);
+             if(bookCheck){
+                  return true;
+              }else {
+              return false;
+              }
+    }
+    }*/
+
 //    public String bookDetails(String book){
 //        if(Library resources == null){
 //            System.out.println("it is not available");
