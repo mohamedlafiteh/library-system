@@ -6,7 +6,7 @@ public class Library {
     ArrayList<Book> resources;
 
     public Library() {
-        resources = new ArrayList<Book>();
+        resources = new ArrayList<>();
     }
 
     public void addBook(Book book) {
@@ -23,7 +23,7 @@ public class Library {
             // bookInf += "book title " + resources.get(i).bookTitle;
             if (resources.size() > 0) {
                  bookInf+= resources.get(i).getBookTitle();
-                bookInf+= resources.get(i).getDamages();
+               // bookInf+= resources.get(i).getDamages();
                 bookInf+= resources.get(i).getISBN();
 
             } else {
@@ -42,6 +42,6 @@ public class Library {
              }
     }
     public void editBookTitle(Book book, String newTitle){
-        
+
     }
 }

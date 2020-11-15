@@ -2,29 +2,17 @@ package com.company;
 
 public class Book {
     private int ISBN;
-    private String damages;
     private String bookTitle;
     private String author;
-    private boolean borrowed;
     private int year;
     private String publisher;
     LibraryUser person;
     Library resources;
 
-    public Book() {
-        this.ISBN=0;
-        this.damages="";
-         this.bookTitle="";
-         this.author="";
-         this.borrowed=false;
-
-    }
-    public Book(int ISBN,String damages,String bookTitle,String author,boolean borrowed,int year,String publisher) {
+    public Book(int ISBN,String bookTitle,String author,int year,String publisher) {
         this.ISBN=ISBN;
-        this.damages=damages;
         this.bookTitle=bookTitle;
         this.author=author;
-        this.borrowed=borrowed;
         this.year=year;
         this.publisher=publisher;
 
@@ -37,31 +25,24 @@ public class Book {
         this.ISBN = ISBN;
     }
 
-    public String getDamages() {
-        return damages;
-    }
 
-    public void setDamages(String damages) {
-        this.damages = this.damages + ".\n " + damages;
-    }
     public String getBookTitle(){
+
         return this.bookTitle;
     }
     public void setBookTitle(String bookTitle){
+
         this.bookTitle=bookTitle;
     }
     public String getAuthor(){
+
         return  this.author;
     }
     public void setAuthor(String author){
+
         this.author=author;
     }
-    public boolean getBorrowed(){
-        return  this.borrowed;
-    }
-    public void  setBorrowed(boolean borrowed){
-        this.borrowed=borrowed;
-    }
+
     public int getYear() {
         return this.year;
     }
