@@ -8,6 +8,12 @@ public class LibraryElectronicDevices {
     private boolean deviceAvailability;
     ArrayList<LibraryElectronicDevices> devicesInLibrary;
 
+    public LibraryElectronicDevices(){
+        this.deviceName="";
+        this.deviceLocation="";
+        this.deviceAvailability=false;
+        devicesInLibrary=new ArrayList<>();
+    }
     public LibraryElectronicDevices(String deviceName,String deviceLocation,boolean deviceAvailability){
         this.deviceName=deviceName;
         this.deviceLocation=deviceLocation;
@@ -23,10 +29,17 @@ public class LibraryElectronicDevices {
         this.deviceLocation = deviceLocation;
     }
 
-    public boolean isDeviceAvailability() {
-        return deviceAvailability;
+    public String getDeviceName() {
+        return deviceName;
     }
 
+    public void setDeviceName(String deviceName) {
+        this.deviceName = deviceName;
+    }
+
+    public boolean getDeviceAvailability() {
+       return  deviceAvailability ;
+    }
     public void setDeviceAvailability(boolean deviceAvailability) {
         this.deviceAvailability = deviceAvailability;
     }
@@ -42,5 +55,17 @@ public class LibraryElectronicDevices {
                 return true;
         }
         return  false;
+    }
+    public String printDeviceDetails(LibraryElectronicDevices device){
+        String details ="";
+        if(devicesInLibrary.contains(device)){
+
+            details+= "The Device name is " + device.getDeviceName() + "\n";
+            details+= "The Device location is " + device.getDeviceLocation() + "\n";
+            details+= "The Device availability " + device.getDeviceAvailability() + "\n";
+        }else {
+            details+="Sorry the device is not available";
+        }
+        return  details;
     }
 }
