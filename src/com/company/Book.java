@@ -6,15 +6,17 @@ public class Book {
     private String author;
     private int year;
     private String publisher;
+    private String bookType;
     LibraryUser person;
     Library resources;
 
-    public Book(int ISBN,String bookTitle,String author,int year,String publisher) {
+    public Book(int ISBN,String bookTitle,String author,int year,String publisher,String bookType) {
         this.ISBN=ISBN;
         this.bookTitle=bookTitle;
         this.author=author;
         this.year=year;
         this.publisher=publisher;
+        this.bookType=bookType;
 
     }
     public int getISBN() {
@@ -53,6 +55,14 @@ public class Book {
 
     public String getPublisher() {
         return publisher;
+    }
+
+    public String getBookType() {
+        return bookType;
+    }
+
+    public void setBookType(String bookType) {
+        this.bookType = bookType;
     }
 
     public void setPublisher(String publisher) {

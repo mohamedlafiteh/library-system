@@ -5,18 +5,18 @@ public class Main {
     public static void main(String[] args) {
 	// write your code here
         Library library = new Library();
-        LibraryElectronicDevices libraryDevice=new LibraryElectronicDevices();
-        Book book1=new Book(22,"JAVA","BlueJ",2020,"SeaCode");
-        Book book2=new Book(22,"python","BlueJ",1920,"Code");
-        Book book3=new Book(20,"python","red",1920,"Code");
+//        LibraryElectronicDevices libraryDevice=new LibraryElectronicDevices();
+//        Book book1=new Book(22,"JAVA","BlueJ",2020,"SeaCode");
+//        Book book2=new Book(22,"python","BlueJ",1920,"Code");
+//        Book book3=new Book(20,"python","red",1920,"Code");
 
 
-        LibraryUser member1=new LibraryUser("Mohamed","Ali","2256");
-        library.addBook(book1);
-        library.addBook(book2);
-        System.out.println(library.libraryDetails());
-        library.removeResourceByPosition(1);
-        System.out.println(library.libraryDetails());
+//        LibraryUser member1=new LibraryUser("Mohamed","Ali","2256");
+//        library.addBook(book1);
+//        library.addBook(book2);
+//        System.out.println(library.libraryDetails());
+//        library.removeResourceByPosition(1);
+//        System.out.println(library.libraryDetails());
 //         member1.borrowBook(book1);
 //         member1.borrowBook(book2);
 
