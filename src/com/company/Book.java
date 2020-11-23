@@ -10,6 +10,15 @@ public class Book {
     LibraryUser person;
     Library resources;
 
+    public Book(){
+        this.ISBN=0;
+        this.bookTitle="";
+        this.author="";
+        this.year=0;
+        this.publisher="";
+        this.bookType="";
+       // resources=new Library();
+    }
     public Book(int ISBN,String bookTitle,String author,int year,String publisher,String bookType) {
         this.ISBN=ISBN;
         this.bookTitle=bookTitle;
@@ -17,6 +26,7 @@ public class Book {
         this.year=year;
         this.publisher=publisher;
         this.bookType=bookType;
+       // resources=new Library();
 
     }
     public int getISBN() {
@@ -68,22 +78,19 @@ public class Book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
-    //public boolean bookAvailabilityCheck(Book book){
-//        for(int i = 0; i < resources.size();i++){
-/*          Book bookCheck = resources.get(book);
-             if(bookCheck){
-                  return true;
-              }else {
-              return false;
-              }
-    }
-    }*/
 
-//    public String bookDetails(String book){
-//        if(Library resources == null){
-//            System.out.println("it is not available");
-//        } else {
-//            System.out.println("book details");
-//        }
-   // }
+//    public boolean bookAvailabilityCheck(Book book){
+//        return  resources.resources.contains(book);
+//    }
+
+    public String printBookDetails(){
+        String book="";
+        book+=ISBN +"\n";
+        book+=bookTitle +"\n";
+        book+=author+"\n";
+        book+=year+"\n";
+        book+=publisher+"\n";
+        book+=bookType +"\n";
+      return book;
+    }
 }

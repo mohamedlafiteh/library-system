@@ -6,14 +6,16 @@ public class Main {
 	// write your code here
         Library library = new Library();
 //        LibraryElectronicDevices libraryDevice=new LibraryElectronicDevices();
-//        Book book1=new Book(22,"JAVA","BlueJ",2020,"SeaCode");
-//        Book book2=new Book(22,"python","BlueJ",1920,"Code");
-//        Book book3=new Book(20,"python","red",1920,"Code");
+        PhysicalBook pBook1=new PhysicalBook(22,"JAVA","BlueJ",2020,"SeaCode","physical","lost pages",true);
+        PhysicalBook pBook2=new PhysicalBook(22,"JAVA","BlueJ",2020,"SeaCode","physical","lost pages",true);
 
 
 //        LibraryUser member1=new LibraryUser("Mohamed","Ali","2256");
-//        library.addBook(book1);
-//        library.addBook(book2);
+        library.addBook(pBook1);
+        library.addBook(pBook2);
+       // System.out.println(library.resources.size());
+        Book book = new Book();
+        //System.out.println(book.bookAvailabilityCheck(pBook1));
 //        System.out.println(library.libraryDetails());
 //        library.removeResourceByPosition(1);
 //        System.out.println(library.libraryDetails());
