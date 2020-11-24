@@ -1,37 +1,41 @@
 package com.company;
 
-public class Book {
+public class Book
+{
+    // instance variables - replace the example below with your own
     private int ISBN;
     private String bookTitle;
     private String author;
     private int year;
     private String publisher;
     private String bookType;
-    LibraryUser person;
+    // change to use
     Library resources;
 
-    public Book(){
-        this.ISBN=0;
-        this.bookTitle="";
-        this.author="";
-        this.year=0;
-        this.publisher="";
-        this.bookType="";
-       // resources=new Library();
-    }
+    /**
+     * Constructor for objects of class Book
+     */
     public Book(int ISBN,String bookTitle,String author,int year,String publisher,String bookType) {
+
+        // initialise instance variables
         this.ISBN=ISBN;
         this.bookTitle=bookTitle;
         this.author=author;
         this.year=year;
         this.publisher=publisher;
         this.bookType=bookType;
-       // resources=new Library();
+
+        // resources=new Library();
+
+
 
     }
+
+
     public int getISBN() {
         return ISBN;
     }
+
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;
@@ -78,19 +82,25 @@ public class Book {
     public void setPublisher(String publisher) {
         this.publisher = publisher;
     }
+    public void printDetailsOfBook(){
 
-//    public boolean bookAvailabilityCheck(Book book){
-//        return  resources.resources.contains(book);
-//    }
+        String  details="";
+        details+= "The ISBN is " +  ISBN+ "\n";
+        details+= "The bookTitle is " + bookTitle+ "\n";
+        details+= "The author is " + author+ "\n";
+        details+= "The year is " + year+ "\n";
+        details+= "The publisher is " + publisher+ "\n";
+        details+= "The bookType is " + bookType+ "\n";
+        System.out.println(details);
 
-    public String printBookDetails(){
-        String book="";
-        book+=ISBN +"\n";
-        book+=bookTitle +"\n";
-        book+=author+"\n";
-        book+=year+"\n";
-        book+=publisher+"\n";
-        book+=bookType +"\n";
-      return book;
+
     }
+         /*public boolean CheckBookAvailability(Book book){
+
+       if(resources.contains(book)){
+           return true;
+        }
+        return false;
+    }*/
+
 }

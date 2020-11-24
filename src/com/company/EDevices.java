@@ -2,24 +2,33 @@ package com.company;
 
 import java.util.ArrayList;
 
-public class LibraryElectronicDevices {
+/**
+ * Write a description of class EDevices here.
+ *
+ * @author (your name)
+ * @version (a version number or a date)
+ */
+public class EDevices
+{
+    // instance variables - replace the example below with your own
     private String deviceName;
     private  String deviceLocation;
     private boolean deviceAvailability;
-    ArrayList<LibraryElectronicDevices> devicesInLibrary;
+    
+    /**
+     * Constructor for objects of class EDevices
+     */
 
-    public LibraryElectronicDevices(){
-        this.deviceName="";
-        this.deviceLocation="";
-        this.deviceAvailability=false;
-        devicesInLibrary=new ArrayList<>();
-    }
-    public LibraryElectronicDevices(String deviceName,String deviceLocation,boolean deviceAvailability){
+    public EDevices(String deviceName,String deviceLocation,boolean deviceAvailability){
         this.deviceName=deviceName;
         this.deviceLocation=deviceLocation;
         this.deviceAvailability=deviceAvailability;
-        devicesInLibrary=new ArrayList<>();
+
     }
+
+
+
+
 
     public String getDeviceLocation() {
         return deviceLocation;
@@ -38,12 +47,12 @@ public class LibraryElectronicDevices {
     }
 
     public boolean getDeviceAvailability() {
-       return  deviceAvailability ;
+        return  deviceAvailability ;
     }
     public void setDeviceAvailability(boolean deviceAvailability) {
         this.deviceAvailability = deviceAvailability;
     }
-    public void addDevices(LibraryElectronicDevices device){
+  /*  public void addDevices(LibraryElectronicDevices device){
         devicesInLibrary.add(device);
     }
    public  void removeDevice(LibraryElectronicDevices device){
@@ -66,6 +75,14 @@ public class LibraryElectronicDevices {
         }else {
             details+="Sorry the device is not available";
         }
+        return  details;
+    }*/
+
+    public String printDeviceDetails(){
+        String details ="";
+        details+= "The Device name is " + this.deviceName + "\n";
+        details+= "The Device location is " + this.deviceName+ "\n";
+        details+= "The Device availability " + this.deviceAvailability + "\n";
         return  details;
     }
 }

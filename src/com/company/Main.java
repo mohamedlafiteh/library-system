@@ -1,65 +1,73 @@
 package com.company;
 
 public class Main {
-
     public static void main(String[] args) {
-	// write your code here
+
         Library library = new Library();
-//        LibraryElectronicDevices libraryDevice=new LibraryElectronicDevices();
-        PhysicalBook pBook1=new PhysicalBook(22,"JAVA","BlueJ",2020,"SeaCode","physical","lost pages",true);
-        PhysicalBook pBook2=new PhysicalBook(22,"JAVA","BlueJ",2020,"SeaCode","physical","lost pages",true);
+        LibraryUsers member1 = new  LibraryUsers();
+        LibraryUsers member2 = new  LibraryUsers();
 
-
-//        LibraryUser member1=new LibraryUser("Mohamed","Ali","2256");
-        library.addBook(pBook1);
-        library.addBook(pBook2);
-       // System.out.println(library.resources.size());
-        Book book = new Book();
-        //System.out.println(book.bookAvailabilityCheck(pBook1));
-//        System.out.println(library.libraryDetails());
-//        library.removeResourceByPosition(1);
-//        System.out.println(library.libraryDetails());
-//         member1.borrowBook(book1);
-//         member1.borrowBook(book2);
-
-//        System.out.println(member1.borrowedBooks.size());
-//        System.out.println(member1.printAllBooksInList());
-
-        //System.out.println(library.libraryDetails());
-        //library.editBookTitle(book2,"c++");
-        //System.out.println(library.libraryDetails());
-       // library.searchBookInResourcesByObject(book2);
-       // library.searchBookInResourcesByISBN(222);
-
-        //System.out.println(library.searchBookInResourcesByAuthorName("BlueJ"));
+        EDevices eDevices1 =new EDevices("computer1","upstairs",true);
+        EDevices eDevices2 =new EDevices("computer2","downstairs",false);
+        EDevices eDevices3 =new EDevices("computer3","downstairs",false);
 
 
 
+        PBook pbook1 = new PBook();
+        PBook pbook2 = new PBook();
+        PBook pbook3 = new PBook();
+        PBook pbook4 = new PBook();
+        PBook pbook5 = new PBook();
+        PBook pbook6 = new PBook();
+        PBook pbook7 = new PBook();
 
 
-//        LibraryElectronicDevices laptop=new LibraryElectronicDevices("computer","floor1",true);
-//        LibraryElectronicDevices ipad=new LibraryElectronicDevices("tablet"," floor2",true);
-//        LibraryElectronicDevices phone=new LibraryElectronicDevices("tablet"," floor2",true);
-//
-//
-//        libraryDevice.addDevices(laptop);
-//        libraryDevice.addDevices(ipad);
-//        System.out.println(libraryDevice.devicesInLibrary.size());
-//        System.out.println(libraryDevice.printDeviceDetails(ipad));
-//
-//        System.out.println(libraryDevice.checkAvailability(phone));
-//        System.out.println(libraryDevice.printDeviceDetails(phone));
-//        //System.out.println(libraryDevice.getDeviceAvailability());
-//        System.out.println(phone.getDeviceAvailability());
+        Book ebook1 = new EBook();
+        Book ebook2 = new EBook();
+        Book ebook3 = new EBook();
+
+        library.addResource(pbook1);
+        library.addResource(pbook2);
+        library.addResource(pbook3);
+        library.addResource(pbook4);
+        library.addResource(pbook5);
+        library.addResource(pbook6);
+        library.addResource(pbook7);
+
+
+        library.addResource(ebook1);
+        library.addResource(ebook2);
+
+        library.addDevices(eDevices1);
+        library.addDevices(eDevices2);
+
+        //System.out.println(pbook1.getMember());
+        //System.out.println(pbook1.getIsBorrowed());
+
+        library.lendBook(member1,pbook1);
+        library.lendBook(member1,pbook2);
+        System.out.println(pbook1.getMember());
+        System.out.println(pbook1.getIsBorrowed());
+        System.out.println(pbook2.getMember());
+        System.out.println(pbook2.getIsBorrowed());
+        int s = member1.numberOfBorrowedBooks();
+        System.out.println(s);
+
+
+//        library.lendBook(member1,pbook3);
+//        library.lendBook(member1,pbook4);
+//        library.lendBook(member1,pbook5);
+//        library.lendBook(member1,pbook6);
+//        library.lendBook(member1,pbook7);
+        library.returnBook(pbook1,false,"");
+        System.out.println(pbook1.getMember());
+        System.out.println(pbook1.getIsBorrowed());
+
+        int n = member1.numberOfBorrowedBooks();
+        System.out.println(n);
 
 
 
-        // Book boo4 =new Book( 2354,"LOST PAGE 8","java","pop",false,1988,"JM books");
-
-        //library.addBook(boo4);
-
-        //System.out.println(library.checkResource(boo));
-        //System.out.println(library.libraryDetails());
 
 
     }
